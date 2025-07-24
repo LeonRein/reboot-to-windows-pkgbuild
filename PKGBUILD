@@ -41,7 +41,7 @@ package() {
   install -Dm644 icons/reboot-to-windows.svg "$pkgdir/usr/share/icons/reboot-to-windows.svg"
   
   # Install documentation
-  install -Dm644 doc/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-  install -Dm644 doc/README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
 
 }
