@@ -31,8 +31,8 @@ package() {
   # Install desktop files
   install -Dm644 desktop/reboot-to-windows.root.desktop "$pkgdir/usr/share/applications/reboot-to-windows.desktop"
   
-  # Install policy file as documentation only
-  install -Dm644 polkit/wartybix.reboot-to-windows.policy "$pkgdir/usr/share/doc/$pkgname/action/wartybix.reboot-to-windows.policy"
+  # Install policy file
+  install -Dm644 polkit/wartybix.reboot-to-windows.policy "$pkgdir/usr/share/polkit-1/actions/wartybix.reboot-to-windows.policy"
   
   # Install polkit rule as documentation only
   install -Dm644 polkit/50-wartybix.reboot-to-windows.rules "$pkgdir/usr/share/doc/$pkgname/rules.d/50-wartybix.reboot-to-windows.rules"

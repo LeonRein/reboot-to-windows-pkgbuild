@@ -6,6 +6,9 @@ post_install() {
       echo "Install the 'qt' or 'qt5-tools' or similar package from your package manager to provide support for KDE's reboot prompt."
     fi
   fi
+
+  echo "To allow wheel users to reboot to Windows without a password, copy the rules file:"
+  echo "  sudo cp /usr/share/doc/reboot-to-windows-git/rules.d/50-wartybix.reboot-to-windows.rules /etc/polkit-1/rules.d/"
 }
 
 post_upgrade() {
