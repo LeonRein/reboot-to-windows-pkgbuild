@@ -9,7 +9,7 @@ url="https://github.com/LeonRein/reboot-to-windows"
 license=('GPL3')
 depends=('polkit')
 makedepends=('git')
-source=("git+$url.git")
+source=("git+$url.git#branch=dev")
 sha256sums=('SKIP')
 install=reboot-to-windows.install
 
