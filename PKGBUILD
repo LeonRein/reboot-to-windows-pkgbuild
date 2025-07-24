@@ -39,7 +39,6 @@ package() {
   
   # Install icons
   install -Dm644 icons/reboot-to-windows.svg "$pkgdir/usr/share/icons/reboot-to-windows.svg"
-  install -Dm644 icons/wartybix.RebootToWindows.Source.svg "$pkgdir/usr/share/icons/wartybix.RebootToWindows.Source.svg"
   
   # Install documentation
   install -Dm644 doc/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
