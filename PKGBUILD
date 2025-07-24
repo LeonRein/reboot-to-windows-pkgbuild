@@ -1,4 +1,4 @@
-# Maintainer: Hans Hermann <hans@hermann.dev>
+# Maintainer: LeonRein <LeonRein at protom dot me>
 _pkgname=reboot-to-windows
 pkgname=${_pkgname}-git
 pkgver=r1.0.0
@@ -11,6 +11,7 @@ depends=('polkit')
 makedepends=('git')
 source=("git+$url.git")
 sha256sums=('SKIP')
+install=reboot-to-windows.install
 
 pkgver() {
   cd "$srcdir/${_pkgname}"
@@ -25,7 +26,6 @@ package() {
 
   # Install main scripts
   install -Dm755 scripts/reboot-to-windows.sh "$pkgdir/usr/bin/reboot-to-windows"
-  install -Dm755 scripts/kde_check.sh "$pkgdir/usr/bin/kde_check"
   install -Dm755 scripts/reboot-to-windows-pkexec.sh "$pkgdir/usr/lib/reboot-to-windows-pkexec.sh"
   
   # Install desktop files
@@ -44,4 +44,5 @@ package() {
   # Install documentation
   install -Dm644 doc/LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 doc/README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
+
 }
